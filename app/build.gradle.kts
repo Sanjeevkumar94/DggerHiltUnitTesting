@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.example.daggerhiltmvvm.CustomRunner"
     }
 
     buildTypes {
@@ -63,4 +63,17 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
+    testImplementation(libs.arch.core.testing)
+    androidTestImplementation(libs.arch.core.testing)
+
+    testImplementation(libs.coroutines.test)
+    androidTestImplementation(libs.coroutines.test)
+
+    androidTestImplementation(libs.hilt.android.testing)
+    kaptAndroidTest(libs.hilt.android.compiler)
+
+    testImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.test.runner)
+
+    androidTestImplementation(libs.androidx.test.core)
 }
